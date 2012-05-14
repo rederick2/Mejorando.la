@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Video, VideoComentario, Setting
+from models import Video, VideoComentario, Setting, Curso
 from django.conf import settings
 
 
@@ -26,7 +26,5 @@ class VideoComentarioAdmin(admin.ModelAdmin):
 admin.site.register(Video, VideoAdmin)
 admin.site.register(VideoComentario, VideoComentarioAdmin)
 admin.site.register(Setting)
-<<<<<<< HEAD
-admin.site.register(Curso, CursoAdmin)
-=======
->>>>>>> d64512ace1eae5e250b4c5d370f90bb511049379
+
+admin.site.register(Curso)

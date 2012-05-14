@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from akismet import Akismet
 import GeoIP
 import image
-from models import Setting, Video, VideoComentario, VideoComentarioForm
+from models import Setting, Video, VideoComentario, VideoComentarioForm, Curso
 import datetime
 import time
 
