@@ -66,6 +66,21 @@ class VideoComentario(models.Model):
 
 # el formulario para agregar un comentario al video
 class VideoComentarioForm(ModelForm):
+<<<<<<< HEAD
+	class Meta:
+		model  = VideoComentario
+		fields = ('autor', 'autor_email', 'autor_url', 'content')
+
+# el archivo de cursos
+class Curso(models.Model):
+	titulo 		  = models.CharField(max_length=150)
+	slug	      = models.CharField(max_length=300)
+	imagen 	      = models.ImageField(upload_to='videos')
+	fecha 	      = models.DateField()
+	descripcion   = models.TextField()
+	activado      = models.BooleanField(default=False, blank=True)
+=======
     class Meta:
         model = VideoComentario
         fields = ('autor', 'autor_email', 'autor_url', 'content')
+>>>>>>> d64512ace1eae5e250b4c5d370f90bb511049379
