@@ -20,9 +20,9 @@
 	      <article class="capitulo">
 	        <p class="desc">{{ curso.descripcion|striptags|truncatechars:120 }}</p>
 	        <div class="cintaver">
-	        </div><a href="{{ curso.get_absolute_url }}" title="{{ curso.titulo }}">
+	        </div><a href="{{ curso.slug }}" title="{{ curso.titulo }}">
 	          
-	          <div class="imagen"><img src="{{ curso.get_thumb_image_url }}" alt="{{ curso.titulo }}"/></div>
+	          <div class="imagen"><img src="{{ curso.get_image_url }}" alt="{{ curso.titulo }}"/></div>
 	          <div class="texto">
 	            <div class="block">
 	              <h2 class="tit">{{ curso.titulo|truncatechars:40 }}</h2>

@@ -22,6 +22,7 @@ class Video(models.Model):
     embed_code = models.TextField()
     descripcion = models.TextField()
     participantes = models.TextField(blank=True)
+    activado = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.titulo
@@ -75,6 +76,13 @@ class Curso(models.Model):
     titulo 		  = models.CharField(max_length=150)
     slug	      = models.CharField(max_length=300)
     imagen 	      = models.ImageField(upload_to='videos')
+    pais          = models.CharField(max_length=150)
     fecha 	      = models.DateField()
     descripcion   = models.TextField()
-    activado      = models.BooleanField(default=False, blank=True)
+    activado      = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.titulo
+
+    def get_image_url(self):
+        return '%s%s' % (settings.MEDIA_URL, str(self.imagen))
