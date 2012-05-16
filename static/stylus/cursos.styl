@@ -6,8 +6,31 @@
 		margin-left 0
 		position absolute
 		text-align right
-		width 189px
+		width 197px
 		img 
 			margin 0 10px
+#header_cursos
+	height 500px 
+	.tela
+		background rgba(0,0,0,.5)
+		height 100%
+		position absolute
+		width 100%
+		z-index 2
+	.datos 
+		font-size 60px
+		font-weight normal
+		max-width 90%
+		position absolute
+		right 20px
+		top 110px
+		z-index 3
 .capitulo
 	position realtive
+@media screen and (max-width:800px)
+	#header_cursos
+		height 320px
+		.datos 
+			text-align center
+			width auto
+
