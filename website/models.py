@@ -75,7 +75,7 @@ class VideoComentarioForm(ModelForm):
 class Curso(models.Model):
     titulo 		  = models.CharField(max_length=150)
     slug	      = models.CharField(max_length=300)
-    imagen 	      = models.ImageField(upload_to='videos')
+    imagen 	      = models.ImageField(upload_to='cursos')
     pais          = models.CharField(max_length=150)
     fecha 	      = models.DateField()
     descripcion   = models.TextField()
