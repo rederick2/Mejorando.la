@@ -77,7 +77,7 @@
 
     {% for curso in cursos %}
     <div class="pais azulclaro"><a href="{{ curso.slug }}" title="iphone-android-colombia" target="_blank">
-        <div class="imagen"><img src="{{ STATIC_PREFIX }}images/home/{{ curso.pais|lower }}.jpg" title="{{ curso.pais }}"/></div>
+        <div class="imagen"><img src="{{ STATIC_PREFIX }}images/home/{{ curso.pais|slugify }}.jpg" title="{{ curso.pais }}"/></div>
         <div class="fecha">
           <h4>{{ curso.pais }}</h4>
           <p>{{ curso.fecha|date:"M.d" }}<strong>/</strong></p>

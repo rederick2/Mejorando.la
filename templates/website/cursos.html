@@ -18,6 +18,7 @@
 	    <section id="anteriores">
 	      {% for curso in mes.cursos %}
 	      <article class="capitulo">
+	      	<h3><img src="{{ STATIC_PREFIX }}images/home/{{ curso.pais|slugify }}.jpg" alt="{{ curso.pais }}" width="30" /> {{ curso.pais }}</h3>
 	        <p class="desc">{{ curso.descripcion|striptags|truncatechars:120 }}</p>
 	        <div class="cintaver">
 	        </div><a href="{{ curso.slug }}" title="{{ curso.titulo }}">
