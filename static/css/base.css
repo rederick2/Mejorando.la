@@ -56,7 +56,8 @@ strong{font-weight:bold}
 #anteriores .tit{font-size:23px}
 #cuerpo,hgroup,footer{background:#fff;margin:0 auto;width:1000px}
 #cursos{background:#fff;padding-top:65px;text-transform:uppercase;}
-#cursos h3{margin-left:80px}
+#cursos h3{margin-left:80px;}
+#cursos h3 a{color:#3d4043}
 #cursos a{color:#fff}
 #cursos a:hover{text-decoration:none}
 #cursos a:hover h5{text-decoration:underline}

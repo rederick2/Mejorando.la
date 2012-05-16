@@ -8,16 +8,14 @@ admin.autodiscover()
 handler404 = 'website.views.handler404'
 
 urlpatterns = patterns('',
-    # home
-    url(r'^$', 'website.views.home'),
-    # archivo de videos
-    url(r'^videos/?$', 'website.views.videos'),
-    # video individual
-    url(r'^videos/(?P<video_slug>.+?)/?$', 'website.views.video'),
-    # transmision en vivo
-    url(r'^live/?$', 'website.views.live'),
-    # feed de videos
-    url(r'^feed/?$', VideoFeed(), name='feed'),
+	url(r'^$', 		   'website.views.home'), # home
+    url(r'^cursos/?$', 'website.views.cursos'), # archivo de cursos
+	url(r'^videos/?$', 'website.views.videos'), # archivo de videos
+	url(r'^videos/(?P<video_slug>.+?)/?$', 'website.views.video'), # video individual
+    url(r'^live/?$',   'website.views.live'),  # transmision en vivo
+
+    url(r'^feed/?$', VideoFeed(), name='feed'), # feed de videos
+
     url(r'^regenerate/?$', 'website.views.regenerate'),
     # actualizar el codigo
     url(r'^update/?$', 'github.views.update'),

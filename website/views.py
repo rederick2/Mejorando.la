@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from akismet import Akismet
 import GeoIP
 import image
-from models import Setting, Video, VideoComentario, VideoComentarioForm
+from models import Setting, Video, VideoComentario, VideoComentarioForm, Curso
 import datetime
 import time
 
@@ -28,17 +28,18 @@ def home(solicitud):
 
     # si no hay videos aun
     try:
-        ultimo_video = Video.objects.latest('fecha')
+        ultimo_video = Video.objects.all().filter(activado=True).order_by('-fecha')[0]
     except Video.DoesNotExist:
         ultimo_video = None
 
-    ultimos_4_videos = Video.objects.all().order_by('-fecha')[1:5]
+    ultimos_4_videos = Video.objects.all().order_by('-fecha').filter(activado=True)[1:5]
     # plantilla
     return render_to_response('website/home.html', {
         'ultimo_video': ultimo_video,  # El ultimo video
         'videos': ultimos_4_videos,  # ultimos 4 videos
         'pais': get_pais(solicitud.META),  # el horario del programa localizado
         'timestamp': get_timestamp(),  # Obtiene el timestamp del sig. program.
+        'cursos': Curso.objects.all().order_by('-fecha').filter(activado=True, fecha__gte=datetime.datetime.now())
     })
 
 
@@ -58,6 +59,15 @@ def get_timestamp():
     sig_jueves = siguiente_jueves_4pm(now)
     return int(time.mktime(sig_jueves.timetuple()) * 1000)
 
+# el archivo de cursos 
+# organizados por mes-año
+def cursos(solicitud):
+	return render_to_response('website/cursos.html', {
+		'meses': [{
+			'fecha' : fecha,
+			'cursos': Curso.objects.filter(fecha__year=fecha.year, fecha__month=fecha.month, activado=True)
+		} for fecha in Curso.objects.dates('fecha', 'month', order='DESC')]
+	})
 
 # el archivo muestra todos los videos
 # organizados por mes-año
@@ -66,7 +76,7 @@ def videos(solicitud):
         'meses': [{
             'fecha': fecha,
             'videos': Video.objects.filter(fecha__year=fecha.year,
-                                        fecha__month=fecha.month)
+                                        fecha__month=fecha.month, activado=True)
         } for fecha in Video.objects.dates('fecha', 'month', order='DESC')]
     })
 

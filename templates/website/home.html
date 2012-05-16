@@ -71,41 +71,24 @@
     </article>
 	{% endfor %}
   </section>
+
   <section id="cursos">
-    <h3>cursos
-    </h3>
-    <div class="pais azulclaro"><a href="http://mejorando.la/cursos/iphone-android-colombia/" title="iphone-android-colombia">
-        <div class="imagen"><img src="{{ STATIC_PREFIX }}images/home/colombia.jpg" title="cursos en colombia"/>
-        </div>
+    <h3><a href="{% url website.views.cursos %}">Cursos</a></h3>
+
+    {% for curso in cursos %}
+    <div class="pais azulclaro"><a href="{{ curso.slug }}" title="iphone-android-colombia" target="_blank">
+        <div class="imagen"><img src="{{ STATIC_PREFIX }}images/home/{{ curso.pais|slugify }}.jpg" title="{{ curso.pais }}"/></div>
         <div class="fecha">
-          <h4>Colombia
-          </h4>
-          <p>Abril.20-21 <strong>/</strong>
-          </p>
+          <h4>{{ curso.pais }}</h4>
+          <p>{{ curso.fecha|date:"M.d" }}<strong>/</strong></p>
         </div>
         <div class="nombre">
-          <h5>programación para iphone y android
-          </h5>
+          <h5>{{ curso.titulo }}</h5>
         </div>
-        <div class="tec"><img src="{{ STATIC_PREFIX }}images/home/apple.png" alt="iphone-android-colombia"/>
+        <div class="tec"><img src="{{ curso.get_image_url }}" alt="{{ curso.titulo }}" width="45" />
         </div></a>
     </div>
-    <div class="pais azuloscuro"><a href="http://mejorando.la/cursos/iphone-android-mexico/" title="iphone-android-mexico">
-        <div class="imagen"><img src="{{ STATIC_PREFIX }}images/home/mexico.jpg" alt="cursos en mexico"/>
-        </div>
-        <div class="fecha">
-          <h4>méxico
-          </h4>
-          <p>Mayo.11-12 <strong>/</strong>
-          </p>
-        </div>
-        <div class="nombre">
-          <h5>programación para iphone y android  
-          </h5>
-        </div>
-        <div class="tec"><img src="{{ STATIC_PREFIX }}images/home/android.png" alt="html5"/>
-        </div></a>
-    </div>
+    {% endfor %}
   </section>
 </section>
 
