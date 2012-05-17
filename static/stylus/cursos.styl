@@ -6,8 +6,55 @@
 		margin-left 0
 		position absolute
 		text-align right
-		width 189px
+		width 197px
 		img 
 			margin 0 10px
+#cuerpo
+	padding-top 20px
+#header_cursos
+	height 500px 
+	margin 0 auto
+	max-width 1000px
+	position relative
+	.tela
+		background rgba(0,0,0,.5)
+		height 100%
+		position absolute
+		top 0
+		width 100%
+		z-index 2
+	.datos 
+		position absolute
+		right 20px
+		top 155px
+		z-index 3
+		text-align right
+		h2 
+			font-size 60px
+			font-weight normal
+			line-height 35px
 .capitulo
 	position realtive
+
+
+@media screen and (max-width:800px)
+	#header_cursos
+		height 320px
+		overflow hidden
+		.datos 
+			text-align center
+			width 100%
+			right auto
+			h2
+				font-size 30px
+				line-height 35px
+				width auto
+
+
+
+@media screen and (max-width:480px)
+	#anteriores
+		h3 
+			position inherit
+			width auto
+	

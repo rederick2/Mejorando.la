@@ -276,8 +276,9 @@ input.text-field
 
 		&:first-child
 			margin 0
-
-#video
+.menu 
+	display none
+.videolive
 	background #000
 	border 6px solid #338ed3
 	border-radius()
@@ -378,7 +379,7 @@ input.text-field
 		height auto
 		margin 0
 
-	#video
+	.videolive
 		border 0
 		border-radius 0
 		left 0
@@ -386,13 +387,13 @@ input.text-field
 // Mobile landscape mode, video only
 @media screen and (max-width:768px) and (orientation:landscape)
 	#col2
-	#video img.video
+	.videolive img.video
 		display none
 
 	#contenido
 		padding-bottom 0 !important
 	
 	#contenido .wrap,
-	#video,
+	.videolive,
 	#wrapper
 		position static

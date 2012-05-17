@@ -26,7 +26,7 @@ Author: Mejorando.la Team: @freddier, @dual3nigma, @LeonidasEsteban, @sp3ncer
   font-style: normal;
 }
 }
-
+@import "classes.styl"
 *{margin:0}
 ::selection
 	
@@ -91,18 +91,16 @@ header
 	z-index 3
 	#maestros
 		margin-left 450px
-		padding-top 17px
 		position absolute
-		top 0
+		top 60px
 		width 110px
 	#cristalab
 		margin-left 770px
-		padding-top 17px
 		position absolute
-		top 0
+		top 60px
 		width 110px
 	div
-		background url(../images/adorno-logo.png) no-repeat 680px top
+		//background url(../images/adorno-logo.png) no-repeat 680px top
 		border-top 7px solid white
 		display block
 		margin 0 auto
@@ -419,6 +417,30 @@ strong
 	border-bottom 1px solid white
 	height 32px
 	width 100%
+.menu
+	background #88bc40
+	font-family Arial
+	margin 0 auto
+	max-width 1000px 
+	ul 
+		font-size 0
+		padding 7px 0 0 0
+		text-align right
+		li 
+			display inline-block
+			font-size 25px 
+			position relative
+			text-align center
+			width 23%
+			z-index 5
+			a
+				display block 
+				height 40px
+				line-height 40px
+				
+			&:nth-child(even)
+				background url("../images/home/adorno-menu.png") no-repeat left center , url("../images/home/adorno-menu.png") no-repeat right center
+
 
 /***********crossbrowser************/
 .ie8 #ultimo .datos .titulo 
@@ -492,7 +514,6 @@ strong
 		margin-left 80%
 
 	header div 
-		background: url("../images/adorno-logo.png") no-repeat 75% top
 		width auto
 		max-width 1000px
 		min-width 800px
@@ -543,7 +564,10 @@ strong
 			right 20px
 			width 100%
 	
-
+	.menu 
+		ul 
+			li 
+				width 20%
 
 @media screen and (max-width:800px)
 	footer 
@@ -591,19 +615,25 @@ strong
 			span:nth-child(2)
 				font-size 15px
 				font-weight normal	
-
-	header #maestros,header #cristalab 
-		display none
+	header 
+		height 66px
+		background white
+ 
+		#maestros,
+		#cristalab 
+			display none
 	
-	header div 
-		background none
-		border-top none
-		width auto
-		max-width 800px
-		min-width 320px
+		div 
+			background none
+			border-top none
+			width auto
+			max-width 800px
+			min-width 320px
 
-	header h1 a img
-		width 230px
+		h1 a 
+			display block
+			img
+				width 230px
 
 	h3 
 		font-size 30px
@@ -720,7 +750,7 @@ strong
 		height 370px
  
 		.datos 
-			height 220px
+			height 280px
 			position relative
 			z-index 4
 
@@ -757,7 +787,7 @@ strong
 			width 100%
 
 		.horario 
-			margin 120px auto 0 auto
+			margin 50px auto 0 auto
 
 
 		.horario strong:nth-child(1)
@@ -766,4 +796,17 @@ strong
 		.horario .big 
 			font-size 30px  
 	
-
+	.menu 
+		ul 
+			padding-top 0
+			li 
+				width 100%
+				text-align left
+				box-sizing border-box
+				border-top 2px solid white
+				&:nth-child(even)
+					background none 
+				a 
+					height 66px 
+					line-height 66px
+					padding-left 20px

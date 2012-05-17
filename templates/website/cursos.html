@@ -3,12 +3,21 @@
 {% block title %}Cursos Presenciales | Mejorando.la{% endblock %}
 
 {% block head %}
+<meta name="viewport" content="width = device-width , initial-scale=1 ,maximum-scale=1 "/>
 <link rel="stylesheet" href="{{ STATIC_PREFIX }}css/base.css?2903" />
 <link rel="stylesheet" href="{{ STATIC_PREFIX }}css/videos.css" />
 <link rel="stylesheet" href="{{ STATIC_PREFIX }}css/cursos.css" />
 {% endblock %}
 
 {% block body %}
+<div id="header_cursos">
+    <img class="portada" src="{{ STATIC_PREFIX }}images/cursos/portada.jpg" alt="los cursos de Mejorandola" height="500" width="1000"/>
+    <div class="tela"></div>
+    <div class="datos">
+    	<h2>Los cursos de <strong>Mejorando.la</strong></h2>   
+    </div>
+        
+</div>
 <section id="cuerpo">
   <section id="archivo">
 	{% for mes in meses %}

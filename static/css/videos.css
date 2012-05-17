@@ -21,3 +21,13 @@ footer{padding-top:0}
 .mes{background:url("../images/archivo/deco_headline.png") no-repeat right 0;margin-bottom:25px;}
 .mes h5{display:inline-block;font-size:112px;height:112px;margin-top:-15px;margin-right:20px;text-align:right;text-transform:uppercase;font-weight:normal}
 .mes span{font-size:20px;letter-spacing:-2px;margin-right:15px;margin-top:20px;vertical-align:top}
+@media screen and (max-width:1000px){#anteriores{height:auto}
+}@media screen and (max-width:800px){#archivo{width:100%}
+#anteriores{height:auto;}
+#anteriores .capitulo{margin:20px 0 !important;float:right}
+#cuerpo{padding-top:20px}
+.mes h5{height:50px;font-size:50px;font-weight:bold}
+}@media screen and (max-width:480px){#anteriores{text-align:right;}
+#anteriores .capitulo{width:auto;height:auto;padding:0 10px;}
+#anteriores .capitulo .desc{margin:10px 0;width:auto;display:block}
+}
