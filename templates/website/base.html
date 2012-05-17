@@ -59,7 +59,13 @@
           </h1><a id="maestros" href="http://maestrosdelweb.com" target="_blank" title="maestros del web"><img src="{{ STATIC_PREFIX }}images/logos/maestros.png" alt="maestros del web"></a><a id="cristalab" href="http://cristalab.com" target="_blank" title="cristalab"><img src="{{ STATIC_PREFIX }}images/logos/cristalab.png" alt="cristalab"></a>
         </div>
       </header>
-
+      <nav class="menu">
+        <ul>
+          <li><a href="{% url website.views.cursos %}" title="cursos">Cursos</a></li>
+          <li><a href="http://mejorando.la/cursos/exalumnos/" title="ex alumnos">Ex alumnos</a></li>
+          <li><a href="{% url website.views.videos %}" title="videos">Videos</a></li>
+        </ul>
+      </nav>
       {% block body %}{% endblock %}
 
     </div>

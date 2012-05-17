@@ -30,9 +30,9 @@ footer .izquierda span{display:block;margin-right:20px;text-align:left}
 footer .izquierda span:nth-child(1){font-size:20px;letter-spacing:-1px;margin-top:20px}
 footer .izquierda span:nth-child(2){font-size:12px;font-weight:bold}
 header{height:0;position:relative;z-index:3;}
-header #maestros{margin-left:450px;position:absolute;top:70px;width:110px}
-header #cristalab{margin-left:770px;position:absolute;top:70px;width:110px}
-header div{background:url("../images/adorno-logo.png") no-repeat 680px top;border-top:7px solid #fff;display:block;margin:0 auto;width:1000px}
+header #maestros{margin-left:450px;position:absolute;top:60px;width:110px}
+header #cristalab{margin-left:770px;position:absolute;top:60px;width:110px}
+header div{border-top:7px solid #fff;display:block;margin:0 auto;width:1000px}
 h3{color:#3d4043;font-size:45px;font-weight:bold;letter-spacing:-1px;text-transform:uppercase}
 img{border:none}
 strong{font-weight:bold}
@@ -108,10 +108,11 @@ strong{font-weight:bold}
 #ultimo .horario .block{display:block}
 #ultimo .horario .big{font-size:40px;letter-spacing:1px}
 .cinta{background:url("../images/home/countdown_separador.jpg");background-size:100%;border-bottom:1px solid #fff;height:32px;width:100%}
-.menu{background:#88bc40;font-family:Arial;}
-.menu ul{padding:0;text-align:right;font-size:0;}
-.menu ul li{display:inline-block;font-size:16px;}
-.menu ul li a{display:block;width:20%}
+.menu{background:#88bc40;font-family:Arial;margin:0 auto;max-width:1000px;}
+.menu ul{font-size:0;padding:7px 0 0 0;text-align:right;}
+.menu ul li{display:inline-block;font-size:25px;position:relative;text-align:center;width:23%;z-index:5;}
+.menu ul li a{display:block;height:40px;line-height:40px}
+.menu ul li:nth-child(even){background:url("../images/home/adorno-menu.png") no-repeat left center,url("../images/home/adorno-menu.png") no-repeat right center}
 .ie8 #ultimo .datos .titulo{max-width:none !important;padding-left:30px !important}
 .ie8 .tela{background:url("../images/home/tela.png")}
 .ie8 .block .tit{background:url("../images/home/tela.png")}
@@ -129,7 +130,7 @@ footer .derecha a{margin:0;display:inline-block;width:40%}
 footer .derecha span:nth-child(1){display:none}
 header #maestros{margin-left:50%}
 header #cristalab{margin-left:80%}
-header div{background:url("../images/adorno-logo.png") no-repeat 75% top;width:auto;max-width:1000px;min-width:800px}
+header div{width:auto;max-width:1000px;min-width:800px}
 #cuerpo,hgroup,footer{max-width:1000px;min-width:800px;width:auto}
 #anteriores{height:190px}
 #cursos .pais .nombre{width:60%;font-size:25px}
@@ -140,6 +141,7 @@ header div{background:url("../images/adorno-logo.png") no-repeat 75% top;width:a
 #ultimo .tela{width:100%}
 #ultimo .boton{bottom:80px;position:absolute;right:20px;width:100%}
 #ultimo .fecha{bottom:60px;position:absolute;right:20px;width:100%}
+.menu ul li{width:20%}
 }@media screen and (max-width:800px){footer{padding-top:10px;}
 footer a{color:#fff}
 footer div{min-height:0;padding-bottom:5px}
@@ -187,7 +189,11 @@ h3{font-size:30px;font-weight:normal;letter-spacing:2px}
 #ultimo .boton,#ultimo .fecha,#ultimo .horario,#ultimo .titulo{float:none;margin-right:auto;text-align:center}
 #ultimo .boton{bottom:0;font-size:20px;position:absolute;width:100%}
 #ultimo .fecha{bottom:-20px;font-size:18px;position:absolute;width:100%}
-#ultimo .horario{margin:120px auto 0 auto}
+#ultimo .horario{margin:50px auto 0 auto}
 #ultimo .horario strong:nth-child(1){font-weight:normal}
 #ultimo .horario .big{font-size:30px}
+.menu ul{padding-top:0;}
+.menu ul li{width:100%;text-align:right;padding-right:20px;box-sizing:border-box;border-top:2px solid #fff;}
+.menu ul li:nth-child(even){background:none}
+.menu ul li a{height:66px;line-height:66px}
 }
