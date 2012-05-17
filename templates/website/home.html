@@ -5,6 +5,13 @@
 {% endblock %}
 {% block body %}
 <section id="cuerpo">
+  <nav class="menu">
+    <ul>
+      <li><a href="{% url website.views.cursos %}" title="cursos"></a>cursos</li>
+      <li><a href="http://mejorando.la/cursos/exalumnos/" title="ex alumnos"></a>Ex alumnos</li>
+      <li><a href="{% url website.views.videos %}" title="videos"></a>Videos</li>
+    </ul>
+  </nav>
   <article id="ultimo">
     <div class="tela"></div>
     
