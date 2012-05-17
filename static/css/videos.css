@@ -1,6 +1,6 @@
 body{background:#3c4043}
 footer{padding-top:0}
-#archivo{position:relative;float:right;text-align:right}
+#archivo{position:relative;float:right;text-align:right;width:100%}
 #anteriores{background:none;margin-bottom:160px;text-align:center;}
 #anteriores .capitulo:nth-child(1){margin-right:30px;margin-left:600px;display:block}
 #anteriores .capitulo:nth-child(2){display:block;margin-left:352px}
@@ -28,9 +28,9 @@ footer{padding-top:0}
 #header_cursos{height:320px;overflow:hidden;}
 #header_cursos .datos{text-align:center;width:100%;right:auto;}
 #header_cursos .datos h2{font-size:30px;line-height:35px;width:auto}
-.mes h5{height:60px;font-size:60px;font-weight:bold}
+.mes h5{height:50px;font-size:50px;font-weight:bold}
 }@media screen and (max-width:480px){#anteriores{text-align:right;}
 #anteriores h3{position:inherit;width:auto}
-#anteriores .capitulo{width:auto;height:auto;padding:0 20px;}
+#anteriores .capitulo{width:auto;height:auto;padding:0 10px;}
 #anteriores .capitulo .desc{margin:10px 0;width:auto;display:block}
 }
