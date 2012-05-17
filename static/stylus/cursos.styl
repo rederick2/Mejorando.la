@@ -11,10 +11,14 @@
 			margin 0 10px
 #header_cursos
 	height 500px 
+	margin 0 auto
+	max-width 1000px
+	position realtive
 	.tela
 		background rgba(0,0,0,.5)
 		height 100%
 		position absolute
+		top 0
 		width 100%
 		z-index 2
 	.datos 
@@ -30,7 +34,10 @@
 @media screen and (max-width:800px)
 	#header_cursos
 		height 320px
+		overflow hidden
 		.datos 
+			font-size 30px
 			text-align center
 			width auto
+			line-height 35px
 

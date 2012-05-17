@@ -10,9 +10,12 @@
 
 {% block body %}
 <div id="header_cursos">
-    <img class="portada" src="../images/cursos/portada.jpg" alt="los cursos de Mejorandola" height="500" width="1000"/>
+    <img class="portada" src="{{ STATIC_PREFIX }}images/cursos/portada.jpg" alt="los cursos de Mejorandola" height="500" width="1000"/>
     <div class="tela"></div>
-    <h2 class="datos">Los cursos de Mejorandola</h1>       
+    <div class="datos">
+    	<h2>Los cursos de <strong>Mejorandola</strong></h2>   
+    </div>
+        
 </div>
 <section id="cuerpo">
   <section id="archivo">

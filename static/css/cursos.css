@@ -1,9 +1,9 @@
 #anteriores h3{color:#fff;font-size:20px;font-weight:normal;margin-left:0;position:absolute;text-align:right;width:197px;}
 #anteriores h3 img{margin:0 10px}
-#header_cursos{height:500px;}
-#header_cursos .tela{background:rgba(0,0,0,0.50);height:100%;position:absolute;width:100%;z-index:2}
+#header_cursos{height:500px;margin:0 auto;max-width:1000px;position:realtive;}
+#header_cursos .tela{background:rgba(0,0,0,0.50);height:100%;position:absolute;top:0;width:100%;z-index:2}
 #header_cursos .datos{font-size:60px;font-weight:normal;max-width:90%;position:absolute;right:20px;top:110px;z-index:3}
 .capitulo{position:realtive}
-@media screen and (max-width:800px){#header_cursos{height:320px;}
-#header_cursos .datos{text-align:center;width:auto}
+@media screen and (max-width:800px){#header_cursos{height:320px;overflow:hidden;}
+#header_cursos .datos{font-size:30px;text-align:center;width:auto;line-height:35px}
 }
