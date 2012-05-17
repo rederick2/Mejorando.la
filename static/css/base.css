@@ -108,6 +108,10 @@ strong{font-weight:bold}
 #ultimo .horario .block{display:block}
 #ultimo .horario .big{font-size:40px;letter-spacing:1px}
 .cinta{background:url("../images/home/countdown_separador.jpg");background-size:100%;border-bottom:1px solid #fff;height:32px;width:100%}
+.menu{background:#88bc40;font-family:Arial;}
+.menu ul{padding:0;text-align:right;font-size:0;}
+.menu ul li{display:inline-block;font-size:16px;}
+.menu ul li a{display:block;width:20%}
 .ie8 #ultimo .datos .titulo{max-width:none !important;padding-left:30px !important}
 .ie8 .tela{background:url("../images/home/tela.png")}
 .ie8 .block .tit{background:url("../images/home/tela.png")}
