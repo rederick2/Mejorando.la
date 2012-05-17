@@ -6,3 +6,8 @@
 #header_cursos .datos{position:absolute;right:20px;top:155px;z-index:3;text-align:right;}
 #header_cursos .datos h2{font-size:60px;font-weight:normal;line-height:35px}
 .capitulo{position:realtive}
+@media screen and (max-width:800px){#header_cursos{height:320px;overflow:hidden;}
+#header_cursos .datos{text-align:center;width:100%;right:auto;}
+#header_cursos .datos h2{font-size:30px;line-height:35px;width:auto}
+}@media screen and (max-width:480px){#anteriores h3{position:inherit;width:auto}
+}
