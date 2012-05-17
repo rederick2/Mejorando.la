@@ -163,7 +163,8 @@ footer .izquierda span{display:inline-block;zoom:1;*display:inline;margin-right:
 footer .izquierda span:nth-child(1){font-size:15px;letter-spacing:0}
 footer .izquierda span:nth-child(2){font-size:15px;font-weight:normal}
 header{height:66px;background:#fff;}
-header #maestros,header #cristalab,header display none,header div{background:none;border-top:none;width:auto;max-width:800px;min-width:320px}
+header #maestros,header #cristalab{display:none}
+header div{background:none;border-top:none;width:auto;max-width:800px;min-width:320px}
 header h1 a{display:block;}
 header h1 a img{width:230px}
 h3{font-size:30px;font-weight:normal;letter-spacing:2px}
