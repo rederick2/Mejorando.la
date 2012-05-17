@@ -9,11 +9,13 @@
 		width 197px
 		img 
 			margin 0 10px
+#cuerpo
+	padding-top 20px
 #header_cursos
 	height 500px 
 	margin 0 auto
 	max-width 1000px
-	position realtive
+	position relative
 	.tela
 		background rgba(0,0,0,.5)
 		height 100%
@@ -22,22 +24,55 @@
 		width 100%
 		z-index 2
 	.datos 
-		font-size 60px
-		font-weight normal
-		max-width 90%
 		position absolute
 		right 20px
-		top 110px
+		top 155px
 		z-index 3
+		text-align right
+		h2 
+			font-size 60px
+			font-weight normal
+			line-height 35px
 .capitulo
 	position realtive
+@media screen and (max-width:1000px)
+	#anteriores 
+		height auto
 @media screen and (max-width:800px)
+	#anteriores
+		height auto
+		.capitulo
+			margin 20px 0 !important
 	#header_cursos
 		height 320px
 		overflow hidden
 		.datos 
-			font-size 30px
 			text-align center
+			width 100%
+			right auto
+			h2
+				font-size 30px
+				line-height 35px
+				width auto
+	.mes
+		h5 
+			height 60px
+			font-size 60px 
+			font-weight bold
+
+
+@media screen and (max-width:480px)
+	#anteriores
+		text-align right
+		h3 
+			position inherit
 			width auto
-			line-height 35px
+		.capitulo
+			width auto
+			height auto
+			padding 0 20px
+			.desc
+				margin 10px 0
+				width auto 
+				display block
 
