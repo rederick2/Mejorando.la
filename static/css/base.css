@@ -30,8 +30,8 @@ footer .izquierda span{display:block;margin-right:20px;text-align:left}
 footer .izquierda span:nth-child(1){font-size:20px;letter-spacing:-1px;margin-top:20px}
 footer .izquierda span:nth-child(2){font-size:12px;font-weight:bold}
 header{height:0;position:relative;z-index:3;}
-header #maestros{margin-left:450px;padding-top:17px;position:absolute;top:0;width:110px}
-header #cristalab{margin-left:770px;padding-top:17px;position:absolute;top:0;width:110px}
+header #maestros{margin-left:450px;position:absolute;top:70px;width:110px}
+header #cristalab{margin-left:770px;position:absolute;top:70px;width:110px}
 header div{background:url("../images/adorno-logo.png") no-repeat 680px top;border-top:7px solid #fff;display:block;margin:0 auto;width:1000px}
 h3{color:#3d4043;font-size:45px;font-weight:bold;letter-spacing:-1px;text-transform:uppercase}
 img{border:none}
