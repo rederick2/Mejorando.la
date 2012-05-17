@@ -162,8 +162,9 @@ footer .izquierda .text{color:#3d4043;width:100%}
 footer .izquierda span{display:inline-block;zoom:1;*display:inline;margin-right:4px}
 footer .izquierda span:nth-child(1){font-size:15px;letter-spacing:0}
 footer .izquierda span:nth-child(2){font-size:15px;font-weight:normal}
-header #maestros,header #cristalab{display:none}
-header div{background:none;border-top:none;width:auto;max-width:800px;min-width:320px}
+header{height:66px;background:#fff;}
+header #maestros,header #cristalab,header display none,header div{background:none;border-top:none;width:auto;max-width:800px;min-width:320px}
+header h1 a{display:block;}
 header h1 a img{width:230px}
 h3{font-size:30px;font-weight:normal;letter-spacing:2px}
 #cuerpo,hgroup,footer{max-width:800px;min-width:320px;width:auto}
@@ -202,7 +203,7 @@ h3{font-size:30px;font-weight:normal;letter-spacing:2px}
 #ultimo .horario strong:nth-child(1){font-weight:normal}
 #ultimo .horario .big{font-size:30px}
 .menu ul{padding-top:0;}
-.menu ul li{width:100%;text-align:right;padding-right:20px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;border-top:2px solid #fff;}
+.menu ul li{width:100%;text-align:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;border-top:2px solid #fff;}
 .menu ul li:nth-child(even){background:none}
-.menu ul li a{height:66px;line-height:66px}
+.menu ul li a{height:66px;line-height:66px;padding-left:20px}
 }
