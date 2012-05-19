@@ -76,7 +76,7 @@ def videos(solicitud):
         'meses': [{
             'fecha': fecha,
             'videos': Video.objects.filter(fecha__year=fecha.year,
-                                        fecha__month=fecha.month, activado=True)
+                                        fecha__month=fecha.month, activado=True).order_by('-fecha')
         } for fecha in Video.objects.dates('fecha', 'month', order='DESC')]
     })
 
