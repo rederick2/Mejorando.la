@@ -86,3 +86,15 @@ class Curso(models.Model):
 
     def get_image_url(self):
         return '%s%s' % (settings.MEDIA_URL, str(self.imagen))
+
+
+class RegistroCurso(models.Model):
+    nombre   = models.CharField(max_length=500)
+    email    = models.EmailField()
+    telefono = models.CharField(max_length=300)
+    pago     = models.BooleanField(default=False)
+    curso    = models.TextField()
+    pais     = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return '%s en %s' % (self.nombre, self.curso)
