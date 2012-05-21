@@ -17,8 +17,13 @@ urlpatterns = patterns('',
     url(r'^feed/?$', VideoFeed(), name='feed'), # feed de videos
 
     url(r'^regenerate/?$', 'website.views.regenerate'),
+
     # actualizar el codigo
     url(r'^update/?$', 'github.views.update'),
+
+    # registro y pago de cursos
+    url(r'^cursos/registro$', 'website.views.cursos_registro'),
+    url(r'^cursos/pago/success$', 'website.views.cursos_pago_success'),
 
     url(r'^admin/', include(admin.site.urls)),
 )

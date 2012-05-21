@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Video, VideoComentario, Setting, Curso
+from models import Video, VideoComentario, Setting, Curso, RegistroCurso
 from django.conf import settings
 
 
@@ -22,9 +22,13 @@ class VideoComentarioAdmin(admin.ModelAdmin):
     ordering = ('-fecha', )
     readonly_fields = ('autor', 'autor_email', 'autor_url', 'content', 'video')
 
+class RegistroCursoAdmin(admin.ModelAdmin):
+    ordering = ('curso', )
+    readonly_fields = ('nombre', 'telefono', 'email', 'curso', 'pais', 'pago')
+
 # registrar los modelos que utilizaran la interfaz de administracion d Django
 admin.site.register(Video, VideoAdmin)
 admin.site.register(VideoComentario, VideoComentarioAdmin)
 admin.site.register(Setting)
-
 admin.site.register(Curso)
+admin.site.register(RegistroCurso, RegistroCursoAdmin)

@@ -4,10 +4,11 @@ from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.forms.models import model_to_dict
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 from akismet import Akismet
 import GeoIP
 import image
-from models import Setting, Video, VideoComentario, VideoComentarioForm, Curso
+from models import Setting, Video, VideoComentario, VideoComentarioForm, Curso, RegistroCurso
 import datetime
 import time
 
@@ -159,3 +160,32 @@ def get_pais(meta):
         country = ''
 
     return country
+
+
+from django.http import HttpResponse
+
+@require_POST
+def cursos_registro(solicitud):
+
+    if solicitud.POST.get('nombre') and solicitud.POST.get('telefono') and solicitud.POST.get('email') and solicitud.POST.get('curso'):
+        if RegistroCurso.objects.filter(email=solicitud.POST.get('email'), curso=solicitud.POST.get('curso')).exists():
+            return HttpResponse('ERROR: Ya te has registrado a este curso.')
+
+        registro = RegistroCurso(nombre=solicitud.POST.get('nombre'), telefono=solicitud.POST.get('telefono'), email=solicitud.POST.get('email'), curso=solicitud.POST.get('curso'), pais=get_pais(solicitud.META))
+        registro.save()
+
+        return HttpResponse('OK')
+
+    return HttpResponse('ERROR')
+
+@require_POST
+def cursos_pago_success(solicitud):
+
+    if solicitud.POST.get('payer_email') and solicitud.POST.get('transaction_subject'):
+        registro = RegistroCurso.objects.get(email=solicitud.POST.get('payer_email'), curso=solicitud.POST.get('transaction_subject'))
+
+        if registro:
+            registro.pago = True
+            registro.save()
+
+    return redirect('/cursos')
