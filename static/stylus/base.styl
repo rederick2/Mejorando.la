@@ -38,6 +38,9 @@ a:hover
 	text-decoration underline
 p
 	margin 0
+h1 
+	position absolute
+	z-index 10
 h2,h5
 	font-weight normal
 body
@@ -88,7 +91,7 @@ footer
 header
 	height 0
 	position relative
-	z-index 3
+	z-index 8
 	#maestros
 		margin-left 450px
 		position absolute
@@ -418,13 +421,16 @@ strong
 	height 32px
 	width 100%
 .menu
-	background #88bc40
+	background rgba(#88bc40,.5)
 	font-family Arial
 	margin 0 auto
-	max-width 1000px 
+	max-width 1000px
+	position absolute
+	width 100%
+	z-index 6
 	ul 
 		font-size 0
-		padding 7px 0 0 0
+		padding 0
 		text-align right
 		li 
 			display inline-block
@@ -797,6 +803,7 @@ strong
 			font-size 30px  
 	
 	.menu 
+		top 68px
 		ul 
 			min-width 320px
 			padding-top 0
