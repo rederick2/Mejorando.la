@@ -167,11 +167,11 @@ from django.http import HttpResponse
 @require_POST
 def cursos_registro(solicitud):
 
-    if solicitud.POST.get('nombre') and solicitud.POST.get('telefono') and solicitud.POST.get('email') and solicitud.POST.get('curso'):
-        if RegistroCurso.objects.filter(email=solicitud.POST.get('email'), curso=solicitud.POST.get('curso')).exists():
+    if solicitud.POST.get('nombre') and solicitud.POST.get('telefono') and solicitud.POST.get('email') and solicitud.POST.get('curso') and solicitud.POST.get('code'):
+        if RegistroCurso.objects.filter(email=solicitud.POST.get('email'), code=solicitud.POST.get('code')).exists():
             return HttpResponse('ERROR: Ya te has registrado a este curso.')
 
-        registro = RegistroCurso(nombre=solicitud.POST.get('nombre'), telefono=solicitud.POST.get('telefono'), email=solicitud.POST.get('email'), curso=solicitud.POST.get('curso'), pais=get_pais(solicitud.META))
+        registro = RegistroCurso(nombre=solicitud.POST.get('nombre'), telefono=solicitud.POST.get('telefono'), email=solicitud.POST.get('email'), curso=solicitud.POST.get('curso'), pais=get_pais(solicitud.META), code=solicitud.POST.get('code'))
         registro.save()
 
         return HttpResponse('OK')

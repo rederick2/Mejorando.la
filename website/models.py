@@ -95,6 +95,7 @@ class RegistroCurso(models.Model):
     pago     = models.BooleanField(default=False)
     curso    = models.TextField()
     pais     = models.CharField(max_length=100)
+    code     = models.CharField(max_length=100)
 
     def __unicode__(self):
         return '%s en %s' % (self.nombre, self.curso)
