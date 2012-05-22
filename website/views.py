@@ -67,7 +67,7 @@ def cursos(solicitud):
 		'meses': [{
 			'fecha' : fecha,
 			'cursos': Curso.objects.filter(fecha__year=fecha.year, fecha__month=fecha.month, activado=True).order_by('-fecha')
-		} for fecha in Curso.objects.dates('fecha', 'month', order='DESC')]
+		} for fecha in Curso.objects.filter(activado=True).dates('fecha', 'month', order='DESC')]
 	})
 
 # el archivo muestra todos los videos
@@ -78,7 +78,7 @@ def videos(solicitud):
             'fecha': fecha,
             'videos': Video.objects.filter(fecha__year=fecha.year,
                                         fecha__month=fecha.month, activado=True).order_by('-fecha')
-        } for fecha in Video.objects.dates('fecha', 'month', order='DESC')]
+        } for fecha in Video.objects.filter(activado=True).dates('fecha', 'month', order='DESC')]
     })
 
 
