@@ -23,8 +23,8 @@ class VideoComentarioAdmin(admin.ModelAdmin):
     readonly_fields = ('autor', 'autor_email', 'autor_url', 'content', 'video')
 
 class RegistroCursoAdmin(admin.ModelAdmin):
-    ordering = ('curso', )
-    readonly_fields = ('nombre', 'telefono', 'email', 'curso', 'pais', 'pago')
+    ordering = ('code', )
+    readonly_fields = ('nombre', 'email', 'telefono', 'pais', 'curso', 'code' , 'pago')
 
 # registrar los modelos que utilizaran la interfaz de administracion d Django
 admin.site.register(Video, VideoAdmin)
