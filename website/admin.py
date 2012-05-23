@@ -9,12 +9,15 @@ class VideoAdmin(admin.ModelAdmin):
 
     # agregar editor de texto
     class Media:
-        js = ('%stiny_mce/tiny_mce.js' % settings.STATIC_URL,
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js',
+            '%swysihtml5/parser_rules/advanced.js' % settings.STATIC_URL,
+            '%swysihtml5/dist/wysihtml5-0.3.0.min.js' % settings.STATIC_URL,
             '%sjs/admin.js' % settings.STATIC_URL
         )
 
         css = {
-            'all': ('css/admin.css', )
+            'all': ('%scss/admin.css' % settings.STATIC_URL,)
         }
 
 
