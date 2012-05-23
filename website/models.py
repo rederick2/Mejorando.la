@@ -96,7 +96,7 @@ class RegistroCurso(models.Model):
     curso     = models.TextField()
     pais      = models.CharField(max_length=100)
     code      = models.CharField(max_length=100)
-    personas  = models.IntegerField()
+    personas  = models.IntegerField(default=1)
     total     = models.FloatField()
     descuento = models.FloatField()
 

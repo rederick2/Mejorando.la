@@ -167,11 +167,18 @@ from django.http import HttpResponse
 @require_POST
 def cursos_registro(solicitud):
 
-    if solicitud.POST.get('nombre') and solicitud.POST.get('telefono') and solicitud.POST.get('email') and solicitud.POST.get('curso') and solicitud.POST.get('code'):
+    if solicitud.POST.get('nombre') and solicitud.POST.get('telefono') and solicitud.POST.get('email') and solicitud.POST.get('curso') and solicitud.POST.get('code') and solicitud.POST.get('total'):
         if RegistroCurso.objects.filter(email=solicitud.POST.get('email'), code=solicitud.POST.get('code')).exists():
             return HttpResponse('ERROR: Ya te has registrado a este curso.')
 
-        registro = RegistroCurso(nombre=solicitud.POST.get('nombre'), telefono=solicitud.POST.get('telefono'), email=solicitud.POST.get('email'), curso=solicitud.POST.get('curso'), pais=get_pais(solicitud.META), code=solicitud.POST.get('code'))
+        registro = RegistroCurso(nombre=solicitud.POST.get('nombre'), telefono=solicitud.POST.get('telefono'), email=solicitud.POST.get('email'), curso=solicitud.POST.get('curso'), pais=get_pais(solicitud.META), code=solicitud.POST.get('code'), total=solicitud.POST.get('total'))
+
+        if solicitud.POST.get('personas'):
+            registro.personas = int(solicitud.POST.get('personas'))
+
+        if solicitud.POST.get('descuento'):
+            registro.descuento = float(solicitud.POST.get('descuento'))
+
         registro.save()
 
         return HttpResponse('OK')
