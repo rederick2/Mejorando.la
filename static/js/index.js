@@ -37,5 +37,31 @@ jQuery(function ($) {
 												// en este caso updateCounter, pero iexplorer8 no reconoce;
 												// este tipo de declaracion de funcion;
 		}();
+
+		function formatNumber(rep) {
+			rep = rep + ''; // coerce to string
+			if (rep < 1000) {
+				return rep; // return the same number
+			} else if (rep < 10000) { // place a comma between
+				return rep.charAt(0) + ',' + rep.substring(1);
+			} else { // divide and format
+				return (rep/1000).toFixed(rep % 1000 != 0)+'k';
+			}
+		}
+
+		(function youtubeCounter(){
+			// youtube video views
+			var count = $.cookie('youtube_views');
+			var $youtube = $('.btn_youtube');
+			if (count) {
+				$youtube.find('.count').text(count + ' views');
+			} else {
+				$.getJSON('http://gdata.youtube.com/feeds/api/users/' + $youtube.data('id') + '?alt=json&callback=?', function(data){ 
+					var count = formatNumber(data.entry['yt$statistics'].subscriberCount);
+					$.cookie('youtube_views', count);
+					$youtube.find('.count').text(count + ' views');
+				});
+			}
+		})();
 	}
 });
