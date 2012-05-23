@@ -89,13 +89,17 @@ class Curso(models.Model):
 
 
 class RegistroCurso(models.Model):
-    nombre   = models.CharField(max_length=500)
-    email    = models.EmailField()
-    telefono = models.CharField(max_length=300)
-    pago     = models.BooleanField(default=False)
-    curso    = models.TextField()
-    pais     = models.CharField(max_length=100)
-    code     = models.CharField(max_length=100)
+    nombre    = models.CharField(max_length=500)
+    email     = models.EmailField()
+    telefono  = models.CharField(max_length=300)
+    pago      = models.BooleanField(default=False)
+    curso     = models.TextField()
+    pais      = models.CharField(max_length=100)
+    code      = models.CharField(max_length=100)
+    personas  = models.IntegerField()
+    total     = models.FloatField()
+    descuento = models.FloatField()
+
 
     def __unicode__(self):
         return '%s en %s' % (self.nombre, self.curso)
