@@ -28,7 +28,7 @@ def home(solicitud):
 
     # si no hay videos aun
     try:
-        ultimo_video = Video.objects.all().filter(activado=True).order_by('-fecha')[0]
+        ultimo_video = Video.objects.all().filter(activado=True).latest('fecha')
     except Video.DoesNotExist:
         ultimo_video = None
 
